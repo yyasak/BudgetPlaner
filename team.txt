@@ -1,0 +1,13 @@
+Teammitglieder und Aufgabenverteilung
+
+Yaren Yasak
+- Entwicklung des Backends mit Python
+- Speicherung und Verwaltung der Anwendungsdaten
+
+Elvan Yasak
+- Erstellung der HTML-Struktur
+- Entwicklung der Templates
+
+Maresa Meyer
+- Gestaltung des Designs mit CSS
+- Entwicklung der interaktiven Funktionen mit JavaScript
