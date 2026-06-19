@@ -349,11 +349,15 @@ function handleExpenseSubmit(event) {
     const amount = Number(elements.amountInput.value);
     const category = elements.categoryInput.value;
     const date = elements.dateInput.value;
-    const description = elements.descriptionInput.value.trim();
+    let description = elements.descriptionInput.value.trim();
 
-    if (!amount || !category || !date || !description) {
-        alert("Bitte alle Felder ausfüllen.");
+    if (!amount || !category || !date ) {
+        alert("Bitte Betrag, Kategorie und Datum ausfüllen.");
         return;
+    }
+
+    if (!description) {
+	description = "Keine Beschreibung";
     }
 
     appState.expenses.push({

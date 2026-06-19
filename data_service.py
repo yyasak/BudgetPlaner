@@ -3,7 +3,7 @@ from datetime import datetime
 
 DATEI = "state.json"
 
-
+# --Lädt die gespeicherten Anwendungsdaten-- 
 def load_state():
     try:
         with open(DATEI, "r") as datei:
@@ -14,7 +14,7 @@ def load_state():
     except:
         return {}
 
-
+# -- Speichert Daten in der state.json--
 def save_state(daten):
     with open(DATEI, "w") as datei:
         json.dump(daten, datei, indent=4)
@@ -26,6 +26,8 @@ def lade_letzten_monat():
     return daten.get("aktueller_monat", {})
 
 
+
+# --Führt alle Speicheropeartionen zusammen aus 
 def speichere_aktuellen_monat(daten):
     alte_daten = load_state()
 
@@ -55,3 +57,8 @@ def lade_letzte_berechnung():
     daten = load_state()
 
     return daten.get("letzte_berechnung", {})
+
+def speichere_alle_daten(daten):
+    save_state(daten)
+    speichere_aktuellen_monat(daten)
+    speichere_letzte_berechnung(daten)
