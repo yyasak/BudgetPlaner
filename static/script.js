@@ -12,11 +12,8 @@ const defaultState = {
     savingDeadline: "",
 
     previousMonthTotals: {},
-
     reminders: [],
-
     selectedCalendarDate: "",
-
     expenses: []
 };
 
