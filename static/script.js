@@ -3,36 +3,21 @@ const STORAGE_KEY = "spendwise-data";
 
 /* ---------------- STANDARDDATEN ---------------- */
 const defaultState = {
-    monthlyBudget: 1000,
-    monthlyIncome: 1500,
-    rentAmount: 650,
-    rentDay: 1,
+    monthlyBudget: 0,
+    monthlyIncome: 0,
 
-    savingGoalName: "Urlaub Spanien",
-    savingGoal: 1000,
-    savingCurrent: 300,
-    savingDeadline: "2026-08",
+    savingGoalName: "",
+    savingGoal: 0,
+    savingCurrent: 0,
+    savingDeadline: "",
 
-    previousMonthTotals: {
-        Lebensmittel: 210,
-        Miete: 650,
-        Freizeit: 70,
-        Transport: 120,
-        Sonstiges: 55
-    },
+    previousMonthTotals: {},
 
-    reminders: [
-        { name: "Netflix-Abo", amount: 12, day: 18 },
-        { name: "Handyvertrag", amount: 20, day: 22 }
-    ],
+    reminders: [],
 
     selectedCalendarDate: "",
 
-    expenses: [
-        { id: 1, date: "2026-05-03", description: "Lidl", category: "Lebensmittel", amount: 45 },
-        { id: 2, date: "2026-05-05", description: "Tanken", category: "Transport", amount: 70 },
-        { id: 3, date: "2026-05-07", description: "Netflix", category: "Freizeit", amount: 12 }
-    ]
+    expenses: []
 };
 
 /* ---------------- DOM ELEMENTE ---------------- */
